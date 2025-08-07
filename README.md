@@ -1,4 +1,4 @@
-# Policy Shift — Executive Summary
+# AirBNB Policy Shift — Executive Summary
 
 ## Overview
 
@@ -22,6 +22,10 @@ Small-inventory hosts now face significant revenue risk when guests book dates m
 
 **Platform-Specific Protection:** This solution creates limitations specifically for Airbnb while preventing guests from blocking your calendar without impacting your availability on other booking platforms (Booking.com, VRBO, direct bookings, etc.). You maintain full flexibility across all other channels.
 
+### Important Limitation
+
+**Not Suitable for High-Volume Hosts:** This strategy is designed for small-inventory hosts. If you manage more than 10 accommodations in the same area, this approach may significantly limit your booking potential and revenue. High-volume hosts should consider alternative risk management strategies.
+
 ## Implementation: Google Apps Script Calendar Generator
 
 ### How It Works
@@ -37,8 +41,9 @@ Small-inventory hosts now face significant revenue risk when guests book dates m
 ### Quick Setup Steps
 
 1. **Script Setup**
-   - Paste code into Google Apps Script
-   - Replace `SPREADSHEET_ID` with your sheet ID
+   - Open the [Google Sheet Template](https://docs.google.com/spreadsheets/d/1IUTRKD7PGOo0ssOyKqZp-0CsJpMGtjX3hPYlKr3SB8k/) and make a copy
+   - Paste code into Google Apps Script (Extensions → Apps Script)
+   - The spreadsheet ID is already configured in the script
    - Set cell B2 to desired buffer days (e.g., 30)
 
 2. **Deployment**
@@ -72,7 +77,7 @@ You can test the calendar blocking functionality using our live example:
 
 ### Complete Deployment Workflow
 
-1. **Open linked sheet** → Extensions → Apps Script → paste code
+1. **Open the [Google Sheet Template](https://docs.google.com/spreadsheets/d/1IUTRKD7PGOo0ssOyKqZp-0CsJpMGtjX3hPYlKr3SB8k/)** → Make a copy → Extensions → Apps Script → paste code
 2. **Project Settings** → enable V8 runtime
 3. **Deploy** → New deployment → Web app
    - Execute as: Me
